@@ -19,3 +19,21 @@ cd haveeru-scraper
 npm install
 ```
 ## Usage
+
+* Scrape first 20 articles 
+
+```bash
+node scrape
+```
+
+* Scrape articles from 100 to 500  
+
+```bash
+node scrape --start 100 --end 500
+```
+
+* Scrape articles from 100 to 70000 with 20 concurrent requests and save full page
+
+```bash
+node scrape --start 100 --end 70000 --limit 20 --save-full-page
+```
