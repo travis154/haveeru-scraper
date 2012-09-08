@@ -31,6 +31,11 @@ function fetch(arr){
 		arr || urls, 
 		defaults.limit, 
 		function(item, callback){
+			var id = item.split('/').pop();
+			if(fs.existsSync(__dirname + '/data/' + id + '.json')){
+				console.log('Already fetched - '.red +  item.red);
+				return callback(null,null);
+			}
 			console.log("Fetching article " + item);
 			request(item,function(err,res,body){
 				if(err){
@@ -40,7 +45,6 @@ function fetch(arr){
 				}
 				var dom = $(body);
 				var title = dom.find('title').html() || '';
-				var id = item.split('/').pop();
 				console.log("Scraped article - "+ item + ' - ' + title.green );
 				//save article
 				if(defaults.saveArticle){
