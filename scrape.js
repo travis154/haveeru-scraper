@@ -13,7 +13,7 @@ var defaults = {
 	, fetchFailed : arg['fetch-failed'] || true
 }
 
-
+fs.mkdir(__dirname + '/data');
 
 var urls = [];
 var failed = [];
@@ -23,6 +23,7 @@ var i = defaults.start - 1;
 while(i++ <= defaults.end){
 	urls.push('http://www.haveeru.com.mv/dhivehi/news/' + i);
 }
+
 
 
 function fetch(arr){
