@@ -7,7 +7,7 @@ var fs = require('fs');
 var defaults = {
 	  start: arg.start || 1
 	, end : arg.end || (arg.start ? arg.start + 20 : 20)
-	, limit : arg.limit || 20
+	, limit : arg.limit || 1
 	, saveArticle: arg['save-article'] || true
 	, saveFullPage:arg['save-full-page'] || false
 	, fetchFailed : arg['fetch-failed'] || true
