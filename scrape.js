@@ -65,10 +65,4 @@ function fetch(arr){
 	);
 }
 fetch();
-/*
-request('http://www.haveeru.com.mv/dhivehi/news/89',function(err,res,body){
-	var dom = $(body);
-	var title = dom.find('title').html() || '';
-	console.log(title);
-});
-*/
+
