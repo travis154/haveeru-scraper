@@ -14,7 +14,7 @@
   "author": "Iulogy",
   "license": "none",
   "dependencies": {
-    "request": "~2.11.1",
+    "request": "~2.88.0",
     "jQuery": "~1.7.4",
     "jsdom": "~0.2.15",
     "jquery": "~1.7.3",
